@@ -71,7 +71,7 @@
     	width: 28%;
     	position: absolute;
     	left: 36.875%;
-    	top: 20.5%;
+    	top: 21%;
     	border-radius: 50%;
     }
     
@@ -360,8 +360,11 @@
     }
     
     .page-5 .content {
+    	width: 80%;
     	height: 60%;
-    	display: -webkit-box;
+    	margin: 0 auto;
+    	right: 0;
+    	/*display: -webkit-box;
     	display: -ms-flexbox;
     	display: -webkit-flex;
     	display: flex;
@@ -375,13 +378,15 @@
     	-webkit-flex-wrap: wrap;
     	-webkit-box-lines: multiple;
     	-moz-flex-wrap: wrap;
-    	flex-wrap: wrap;
+    	flex-wrap: wrap;*/
+    	display: block;
     }
     
     .page-5 .content dl {
     	width: 25%;
     	height: 35%;
-    	margin: 5px;
+    	margin: 0 4%;
+    	float: left;
     }
     
     .page-5 .content dt {
@@ -414,7 +419,7 @@
     	width: 28%;
     	position: absolute;
     	left: 36.875%;
-    	top: 20.5%;
+    	top: 21%;
     	border-radius: 50%;
     }
     
@@ -476,7 +481,7 @@
     	width: 30px;
     	position: fixed;
     	left: 48%;
-    	bottom: 5%;
+    	bottom: 3%;
     	-webkit-animation: up 2s linear infinite;
     	-moz-animation: up 2s linear infinite;
     	-ms-animation: up 2s linear infinite;
