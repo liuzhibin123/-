@@ -15,7 +15,7 @@
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide page-1">
-					<img class="self" src="img/self.jpg" />
+					<img class="self ani" swiper-animate-effect="scale" swiper-animate-duration="1s" src="img/self.jpg" />
 					<img class="self-wrap" src="img/self-wrap.png" />
 					<p class="p1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s">HI!</p>
 					<p class="p2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="2s">我叫刘智斌</p>
@@ -173,8 +173,7 @@
 				swiperAnimate(swiper); //初始化完成开始动画
 			},
 			onSlideChangeEnd: function(swiper) {
-				swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-				
+				swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画				
 				var btn = document.querySelector(".btn2")
 				var slide = document.querySelectorAll(".swiper-slide")
 				if (swiper.activeIndex == slide.length - 1) {
@@ -185,11 +184,7 @@
 			}
 
 		});
-		//		if(self.parentNode.style.display=="block"  window.getComputedStyle(self.parentNode,null)["display"]){
-		//			self.classList.add("an");
-		//		}else{
-		//			self.classList.remove("an");
-		//		}
+
 	</script>
 
 </html>

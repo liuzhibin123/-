@@ -43,11 +43,26 @@
     	font-family: "Microsoft YaHei";
     }
     
-    @keyframes scale {
+    @-webkit-keyframes scale {
     	from {
+    		-webkit-transform: scale(2);
     		transform: scale(2);
     	}
     	to {
+    		-webkit-transform: scale(0.9);
+    		transform: scale(0.9);
+    	}
+    }
+    
+    @keyframes scale {
+    	from {
+    		-webkit-transform: scale(2);
+    		-ms-transform: scale(2);
+    		transform: scale(2);
+    	}
+    	to {
+    		-webkit-transform: scale(0.9));
+    		-ms-transform: scale(0.9));
     		transform: scale(0.9);
     	}
     }
@@ -60,13 +75,24 @@
     	border-radius: 50%;
     }
     
-    .an {
-    	animation: scale 1s linear;
+    .scale {
+    	-webkit-animation: scale ease;
+    	animation: scale ease;
+    }
+    
+    @-webkit-keyframes rotate {
+    	from {}
+    	to {
+    		-webkit-transform: rotateZ(360deg);
+    		transform: rotateZ(360deg);
+    	}
     }
     
     @keyframes rotate {
     	from {}
     	to {
+    		-webkit-transform: rotateZ(360deg);
+    		-ms-transform: rotateZ(360deg);
     		transform: rotateZ(360deg);
     	}
     }
@@ -77,6 +103,7 @@
     	left: 32%;
     	top: 18%;
     	border-radius: 50%;
+    	-webkit-animation: rotate 4s linear infinite;
     	animation: rotate 4s linear infinite;
     }
     
@@ -123,7 +150,7 @@
     
     .ul1 {
     	left: 0%;
-    	top: 7%;
+    	top: 5%;
     }
     
     .ul1 li {
@@ -346,7 +373,8 @@
     	-ms-align-content: flex-start;
     	align-content: flex-start;
     	-webkit-flex-wrap: wrap;
-    	-ms-flex-wrap: wrap;
+    	-webkit-box-lines: multiple;
+    	-moz-flex-wrap: wrap;
     	flex-wrap: wrap;
     }
     
@@ -374,8 +402,12 @@
     	display: -ms-flexbox;
     	display: -webkit-flex;
     	display: flex;
-    	-webkit-flex-direction: column;
+    	-webkit-box-orient: vertical;
+    	-webkit-box-direction: normal;
+    	-moz-box-orient: vertical;
+    	-moz-box-direction: normal;
     	flex-direction: column;
+    	-webkit-flex-direction: column;
     }
     
     .page-6 .self {
@@ -392,6 +424,7 @@
     	left: 31.25%;
     	top: 18%;
     	border-radius: 50%;
+    	-webkit-animation: rotate 4s linear infinite;
     	animation: rotate 4s linear infinite;
     }
     
@@ -420,10 +453,22 @@
     	margin: 0 5px;
     }
     
+    @-webkit-keyframes up {
+    	from {}
+    	to {
+    		-webkit-transform: translateY(-20px);
+    		transform: translateY(-20px);
+    		opacity: 0;
+    	}
+    }
+    
     @keyframes up {
     	from {}
     	to {
+    		-webkit-transform: translateY(-20px);
+    		-ms-transform: translateY(-20px);
     		transform: translateY(-20px);
+    		opacity: 0;
     	}
     }
     
@@ -432,5 +477,8 @@
     	position: fixed;
     	left: 48%;
     	bottom: 5%;
+    	-webkit-animation: up 2s linear infinite;
+    	-moz-animation: up 2s linear infinite;
+    	-ms-animation: up 2s linear infinite;
     	animation: up 2s linear infinite;
     }
